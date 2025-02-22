@@ -39,7 +39,7 @@
 |------ components/ (Componentes reutilizáveis)
 |------ pages/ (Páginas do sistema)
 |-------- Dashboard.tsx
-|-------- CattleManagement.tsx
+|-------- GadoManagement.tsx
 |------ services/ (Integração com backend via API)
 |------ store/ (Gerenciamento de estado, se necessário - Redux/Zustand)
 |------ App.tsx
