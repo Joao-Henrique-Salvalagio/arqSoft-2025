@@ -10,6 +10,49 @@
 
 ---
 
+### Estrutura do Projeto - Arquitetura MVC
+```
+|-- backend/ (NestJS)
+|---- src/
+|------ modules/ (Módulos do sistema)
+|-------- gado/ (Cadastro e movimentação de gado)
+|---------- controllers/
+|------------ gado.controller.ts
+|---------- services/
+|------------ gado.service.ts
+|---------- dto/
+|------------ create-gado.dto.ts
+|------------ update-gado.dto.ts
+|---------- entities/
+|------------ gado.entity.ts
+|-------- lot/ (Gestão de lotes)
+|-------- user/ (Gestão de usuários e autenticação)
+|------ config/ (Configurações gerais)
+|------ database/ (Configuração do banco de dados)
+|------ main.ts (Arquivo principal do NestJS)
+|---- test/ (Testes unitários)
+|---- package.json
+|---- tsconfig.json
+
+|-- frontend/ (React)
+|---- src/
+|------ components/ (Componentes reutilizáveis)
+|------ pages/ (Páginas do sistema)
+|-------- Dashboard.tsx
+|-------- CattleManagement.tsx
+|------ services/ (Integração com backend via API)
+|------ store/ (Gerenciamento de estado, se necessário - Redux/Zustand)
+|------ App.tsx
+|---- public/
+|---- package.json
+|---- tsconfig.json
+
+|-- docker-compose.yml (Configuração para rodar backend e banco de dados)
+|-- .env (Configuração de variáveis de ambiente)
+```
+
+---
+
 ### Requisitos Funcionais  
 
 1. **Cadastro de Gado** – Permitir o registro de cada animal com informações como identificação (brinco, RFID), raça, idade, peso, origem e status (ativo, vendido, abatido, etc.).  
