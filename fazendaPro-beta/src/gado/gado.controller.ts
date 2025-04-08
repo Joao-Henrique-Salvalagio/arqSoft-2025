@@ -5,7 +5,9 @@ import { sendTestEmail } from 'src/utils/email.util';
 
 @Controller('gado')
 export class GadoController {
-  constructor(private readonly gadoService: GadoService) {}
+  constructor(
+    private readonly gadoService: GadoService
+  ) {}
 
   @Post()
   async criar(@Body() criarGadoDto: CriarGadoDto) {

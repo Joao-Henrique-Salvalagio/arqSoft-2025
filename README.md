@@ -1,4 +1,15 @@
 # FazendaPro
+
+## 📌 Índice
+
+- [Definição do Produto](#definição-do-produto)
+- [Requisitos Funcionais](#requisitos-funcionais)
+- [Requisitos Não Funcionais](#requisitos-não-funcionais)
+- [Restrições e Condições](#restrições-e-condições)
+- [Necessidades dos Stakeholders](#necessidades-dos-stakeholders)
+- [Riscos do Projeto](#riscos-do-projeto)
+- [Implementação do LogManager](#implementação-do-logmanager)
+
 ---
 
 ### Definição do Produto
@@ -7,49 +18,6 @@
   - **Público-Alvo:** Fazendas de pequeno, médio e grande porte, com rebanhos de tamanhos variados.  
   - **Contexto de uso:** O sistema será utilizado por proprietários, gerentes, agrônomos e funcionários administrativos. Ele deve ser intuitivo, pois nem todos os usuários têm familiaridade com tecnologia. O acesso será realizado tanto em escritórios quanto no campo, exigindo compatibilidade com computadores, tablets e celulares, além de funcionamento offline com sincronização posterior.  
   - **Objetivo Principal:** Tornar a gestão agropecuária mais eficiente, reduzindo desperdícios e aumentando a produtividade. O sistema deve atender a normas ambientais e regulatórias, como o Cadastro Ambiental Rural (CAR), e permitir a geração de relatórios exigidos por órgãos governamentais. A integração com outras ferramentas do setor pode ser um diferencial importante.  
-
----
-
-### Estrutura do Projeto - Arquitetura MVC
-```
-|-- backend/ (NestJS)
-|---- src/
-|------ modules/ (Módulos do sistema)
-|-------- gado/ (Cadastro e movimentação de gado)
-|---------- controllers/
-|------------ gado.controller.ts
-|---------- services/
-|------------ gado.service.ts
-|---------- dto/
-|------------ create-gado.dto.ts
-|------------ update-gado.dto.ts
-|---------- entities/
-|------------ gado.entity.ts
-|-------- lot/ (Gestão de lotes)
-|-------- user/ (Gestão de usuários e autenticação)
-|------ config/ (Configurações gerais)
-|------ database/ (Configuração do banco de dados)
-|------ main.ts (Arquivo principal do NestJS)
-|---- test/ (Testes unitários)
-|---- package.json
-|---- tsconfig.json
-
-|-- frontend/ (React)
-|---- src/
-|------ components/ (Componentes reutilizáveis)
-|------ pages/ (Páginas do sistema)
-|-------- Dashboard.tsx
-|-------- GadoManagement.tsx
-|------ services/ (Integração com backend via API)
-|------ store/ (Gerenciamento de estado, se necessário - Redux/Zustand)
-|------ App.tsx
-|---- public/
-|---- package.json
-|---- tsconfig.json
-
-|-- docker-compose.yml (Configuração para rodar backend e banco de dados)
-|-- .env (Configuração de variáveis de ambiente)
-```
 
 ---
 
@@ -140,4 +108,10 @@
 - Orçamento e Prazos – Restrições financeiras ou atrasos no desenvolvimento podem impactar a entrega do produto final.
 - Evolução das Necessidades do Cliente – O sistema pode precisar de atualizações constantes para atender novas demandas do setor agropecuário.
 
+---
 
+### Implementação do LogManager
+- Foi criado a entidade LogManager para ser salva em um banco de dados MongoDB em docker.
+- Como utilização para nosso projeto, está sendo utilizado para guardar os logs de criação de gados, que seria a única entidade que temos no sistema atualmente.
+- O processo é simples, é salvo os dados dessa forma: ["chave: valor","chave: valor",...] e com a data de alteração do dado.
+![img_code]({FE8FA621-B4E3-446E-85C9-FEE8E9A37101}.png)
