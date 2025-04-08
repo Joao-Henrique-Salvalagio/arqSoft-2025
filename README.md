@@ -114,4 +114,3 @@
 - Foi criado a entidade LogManager para ser salva em um banco de dados MongoDB em docker.
 - Como utilização para nosso projeto, está sendo utilizado para guardar os logs de criação de gados, que seria a única entidade que temos no sistema atualmente.
 - O processo é simples, é salvo os dados dessa forma: ["chave: valor","chave: valor",...] e com a data de alteração do dado.
-![LogManager em uso](https://private-user-images.githubusercontent.com/113494944/431197717-be65e29b-021d-4a04-aab6-b67d32221fb4.png)
