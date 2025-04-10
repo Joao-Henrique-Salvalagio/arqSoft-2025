@@ -10,4 +10,4 @@ export class LogManager extends Document {
   data_alteracao: Date;
 }
 
-export const GadoSchema = SchemaFactory.createForClass(LogManager);
+export const LogManagerSchema = SchemaFactory.createForClass(LogManager);
