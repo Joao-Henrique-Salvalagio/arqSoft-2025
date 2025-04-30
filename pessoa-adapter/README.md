@@ -1,5 +1,8 @@
 # Projeto: Adapter para Leitura de Pessoas em CSV
 
+RAFAEL MANSO CAMPIGOTTO RA: 22014205-2
+JOÃO HENRIQUE SALVALAGIO ABRAHIM RA: 23123581-2
+
 ## Objetivo
 Este projeto demonstra a aplicação do Padrão de Projeto Adapter para adaptar a leitura de um arquivo `.csv` para o formato utilizado pelo sistema.
 
