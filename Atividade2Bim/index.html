@@ -1,0 +1,47 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>SOA - Tendência de Nomes no Brasil</title>
+  <link rel="stylesheet" href="style.css" />
+  <script src="https://cdn.jsdelivr.net/npm/chart.js"></script>
+</head>
+<body>
+  <div class="container">
+    <h1>📊 Análise de Tendência de Nomes</h1>
+
+    <section class="card">
+      <h2>🔹 Evolução de um Nome</h2>
+      <div class="form-group">
+        <input type="text" id="nome1" placeholder="Digite um nome..." />
+        <input type="number" id="inicio1" placeholder="Início (ex: 1970)" />
+        <input type="number" id="fim1" placeholder="Fim (ex: 2000)" />
+        <button onclick="buscarEvolucaoNome()">Buscar</button>
+      </div>
+      <canvas id="graficoEvolucao"></canvas>
+    </section>
+
+    <section class="card">
+      <h2>🔹 Top 3 Nomes por Estado</h2>
+      <div class="form-group">
+        <select id="uf"></select>
+        <button onclick="buscarTopNomesUF()">Buscar</button>
+      </div>
+      <table id="tabelaLocalidade"></table>
+    </section>
+
+    <section class="card">
+      <h2>🔹 Comparar Dois Nomes</h2>
+      <div class="form-group">
+        <input type="text" id="nome2a" placeholder="Primeiro nome" />
+        <input type="text" id="nome2b" placeholder="Segundo nome" />
+        <button onclick="compararNomes()">Comparar</button>
+      </div>
+      <canvas id="graficoComparacao"></canvas>
+    </section>
+  </div>
+
+  <script src="script.js"></script>
+</body>
+</html>
