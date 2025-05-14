@@ -1,5 +1,12 @@
 # FazendaPro
 
+- Rafael Manso Campigotto - RA: 22014205-2
+- João Henriue Salvalagio - RA: 23123581-2
+- Eduardo Navarro - RA: 22014553-2
+- Eduardo Voltatone - RA: 22207439-2
+- Luciano Giraldi - RA: 22228890-2
+- Pedro Gomes - RA: 22087525-2
+
 ## 📌 Índice
 
 - [Definição do Produto](#definição-do-produto)
